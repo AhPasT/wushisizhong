@@ -3,23 +3,34 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
     background: #333;
     color: #fff;
     padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .logo img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 50px;
 }
 
 header h1 {
     margin: 0;
-    text-align: center;
+    padding-left: 70px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 10px 0 0 0;
 }
 
 nav ul li {
@@ -30,10 +41,29 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
 }
 
 main {
     padding: 20px;
+}
+
+main .intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main .intro img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -44,4 +74,11 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.announcements {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
