@@ -3,22 +3,27 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #fff; /* 设置整体背景为白色 */
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #fff; /* 将header的背景设为白色 */
+    color: #333; /* 修改header文字颜色为深灰色 */
     padding: 10px 0;
     text-align: center;
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
+    z-index: 1000; /* 确保header在其他内容之上 */
 }
 
-header .logo img {
+header .logo {
     position: absolute;
     left: 10px;
     top: 10px;
-    height: 50px;
+}
+
+header .logo img {
+    height: 50px; /* 设置logo的高度 */
 }
 
 header h1 {
@@ -39,14 +44,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333; /* 修改导航链接颜色为深灰色 */
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #f4f4f4; /* 修改导航链接悬停时的背景色 */
     border-radius: 5px;
 }
 
@@ -93,3 +98,4 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
