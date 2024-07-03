@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 header {
@@ -57,13 +57,24 @@ main {
 main .intro {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
-main .intro img {
-    width: 80%;
-    height: auto;
+main .intro .background-image {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+
+main .intro .background-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer {
