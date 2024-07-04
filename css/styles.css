@@ -68,7 +68,7 @@ main .intro {
     position: relative;
 }
 
-main .intro .background-image {
+main .intro .background-slider {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -77,7 +77,17 @@ main .intro .background-image {
     max-width: 100%; /* 确保图片宽度适中 */
 }
 
-main .intro .background-image img {
+main .intro .background-slider .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+main .intro .background-slider .slide.active {
+    display: block;
+}
+
+main .intro .background-slider img {
     width: 100%;
     height: auto;
     object-fit: cover; /* 确保图片覆盖整个区域并保持比例 */
@@ -107,3 +117,4 @@ footer .container {
     max-width: 800px;
     margin: 20px auto;
 }
+
