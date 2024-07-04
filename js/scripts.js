@@ -1,14 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('nav ul li a');
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.background-slider .slide');
+    let currentSlide = 0;
 
-    links.forEach(link => {
-        link.addEventListener('mouseover', function() {
-            link.style.transform = 'scale(1.1)';
-            link.style.transition = 'transform 0.3s';
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
         });
+    }
 
-        link.addEventListener('mouseout', function() {
-            link.style.transform = 'scale(1)';
-        });
-    });
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // 每3秒切换一次图片
 });
