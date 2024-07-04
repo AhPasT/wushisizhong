@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #fff; /* 设置整体背景为白色 */
+    background-color: #f0f0f0; /* 更改整体背景为浅灰色 */
 }
 
 header {
@@ -75,11 +75,9 @@ main .intro .background-image {
 
 main .intro .background-image img {
     width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 100%;
+    object-fit: cover; /* 确保图片覆盖整个区域并保持比例 */
+    object-position: center; /* 确保图片居中显示 */
 }
 
 footer {
@@ -98,4 +96,3 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
