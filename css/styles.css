@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* 通用样式 */
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -6,6 +9,7 @@ body {
     background-color: #f0f0f0; /* 更改整体背景为浅灰色 */
 }
 
+/* 页头样式 */
 header {
     background: #fff; /* 将header的背景设为白色 */
     color: #333; /* 修改header文字颜色为深灰色 */
@@ -58,6 +62,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* 主体内容样式 */
 main {
     padding: 100px 20px 20px; /* 确保内容不被header遮挡 */
 }
@@ -66,6 +71,16 @@ main .intro {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
+}
+
+main .intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main .intro p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 main .intro .background-slider {
@@ -94,6 +109,114 @@ main .intro .background-slider img {
     object-position: center; /* 确保图片居中显示 */
 }
 
+.announcements {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.announcements h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.announcements p {
+    font-size: 16px;
+}
+
+/* 动效样式 */
+@keyframes fade {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
+.slide {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* 轮播图片样式 */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* 照片轮播样式 */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 页脚样式 */
 footer {
     background: #333;
     color: #fff;
@@ -109,12 +232,34 @@ footer .container {
     padding: 0 20px;
 }
 
-.announcements {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 20px auto;
+footer p {
+    margin: 0;
 }
 
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
