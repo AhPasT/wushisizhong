@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 0;
     const slides = document.querySelectorAll('.background-slider .slide');
